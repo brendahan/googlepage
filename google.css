@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'Product Sans';
-    font-style: normal;
-    font-weight: 400;
-}
+
 body{
 margin:0;
 font-family: Arial, sans-serif;
@@ -23,40 +19,24 @@ nav{
 }
 .header-nav{
     display: flex;
-    flex-wrap:wrap;
     align-items: center;
-    margin-bottom: 0;
-}
-ul > a, ul > img{
-    padding:0 8px;
-}
-.header-img{
-    width:20%;
-    padding: 5px;
-    background-color: rgb(245, 239, 239);
-    border-radius: 50%;
- 
+    flex-direction: flex end;
 }
 
-    *,*:before, *:after {
-        box-sizing: inherit;
-    }
+.header-img{
+    max-width:30%;
+    max-height:30%;
+   margin-right:10px;
+   margin-left:10px;
+    cursor: pointer;
+    border-radius: 80%;
 }
+
 .header-img:hover{
-    background-color: #8080808a;
-    box-shadow: 0 0 10px gainsboro;
+    background-color: #c4bebe8a;
+    box-shadow: 0px 0px 0px 4px gainsboro;
+    cursor: pointer;
     
-}
-header button{
-    background-color: #4285f4;
-  color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: Helvetica;
-  font-size: 14px;
 }
 
 section{
@@ -82,8 +62,7 @@ section h1{
     
    }
 .my-input-container:hover{
-       border-style:double;
-       box-shadow:#f2f2f2
+       border-style:
    }
 .my-input-container img{
        width:20px;
@@ -139,8 +118,8 @@ margin-top: 5px;
 .footer-left{
     margin-top: 0;
     }
-@media (max-width: 800px){
-    .flex-item-right, .flex-item-right{
+@media (max-width: 600px){
+    .flex-item-right, .flex-item-left{
         flex:100%;
     }
 }
