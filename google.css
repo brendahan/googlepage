@@ -1,8 +1,14 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
 
 body{
-margin:0;
+margin: 0;
 font-family: Arial, sans-serif;
-font-size: 0.9em;
+font-size: 0.9Rem;
 }
 a{
     margin:5px;
@@ -12,41 +18,50 @@ a{
 a:hover{
     text-decoration:underline;
 }
-nav{
+.header-nav{
     display:flex;
-    flex-wrap:wrap;
     justify-content: flex-end;
 }
-.header-nav{
+.header-navleft{
     display: flex;
-    align-items: center;
-    flex-direction: flex end;
+    align-items: center; 
+    padding-top:0;
+    
 }
-
-.header-img{
-    max-width:30%;
-    max-height:30%;
-   margin-right:10px;
-   margin-left:10px;
+.header-navright{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right:10px;
+}
+.my-apps{
+    max-width:35%;
+    max-height:35%;
     cursor: pointer;
     border-radius: 80%;
 }
-.header-img:hover{
+.my-profile{
+    max-width:45%;
+    max-height:45%;
+    margin-left: 5px ;
+    cursor: pointer;
+    border-radius: 70%;
+}
+.my-apps:hover, .my-profile:hover{
     background-color: #c4bebe8a;
-    box-shadow: 0px 0px 0px 4px gainsboro;
+    box-shadow: 0 0 0 6Px gainsboro;
     cursor: pointer;
 }
 section{
        display:flex;
-       flex-wrap:wrap;
        flex-direction: column;
        align-items: center;
+       margin-top: 2vh;
    }
    
 section h1{
        font-size: 5.5em;
-       margin: 10px;
-        font-family:'Gill Sans';
+       margin-top: 0;
 
    }
 .my-input-container{
@@ -58,42 +73,46 @@ section h1{
        border-radius: 30px;
    }
 .my-input-container:hover{
-       border-style:in-range;
+    box-shadow: 0 0 10px gainsboro;
    }
 .img-1{
        width:20px;
        height:20px;
        padding: 10px;
    }
+.my-input-container > input {
+    flex-grow: 8;
+    border:none;
+    outline: none;
+}
 .img-2{
     width:32px;
     height:32px;
     padding:5px 10px;
 }
-.my-input-container > input {
-    flex-grow: 1;
-    border:none;
-    outline: none;
-}
+
 .my-button-container{
        display: flex;
-       justify-content: space-around;
-       align-items: center;
-        margin: 40px;
+       flex-direction:row;
+       padding-top:10px;
    }
  
 .button-1, .button-2{
     margin-left: 20px;
     padding:8px 13px;
     cursor: pointer;
-    font-size: 14px;
     border-radius: 5px;
-    background-color: rgb(247, 243, 243);
+    background-color: #f8f9fa;
     border: gainsboro;
+    font-size: 15px;
 }
 .button-1 a, .button-2 a{
 text-decoration: none;
 }
+.button-1:hover, .button-2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 2px gray;
+    }
 section p a{
     color: blue;
 }
@@ -104,30 +123,50 @@ footer{
        bottom:0;
        width:100vw;
    }
-
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
 footer h1{
-    font-size: 16px;
-    padding-left: 200px;
+    font-size: 14px;
+    padding-left: 20px;
     padding-bottom: 5px;
     color: #808080ec;
     font-family: arial,sans-serif;
 }
-footer nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    padding-top: 5px;
-}
 .footer-right{
-padding-right: 200px;
-margin-top: 5px;
+display: flex;
+justify-content: flex-end;
+padding-right: 20px;
+align-items: center;
+margin-top: 0;
 }
 .footer-left{
-    margin-top: 0;
-    padding-left: 200px;
+display: flex;
+justify-content: flex-start;
+padding-left: 20px;
+align-items: center;
+margin-top: 0;
+}
+@media (max-height:522px){
+    body {
+        overflow-x:hidden;
     }
-@media (max-width: 600px){
-    .flex-item-right, .flex-item-left{
-        flex:100%;
+    section {
+        margin-bottom: 20px;
+    }
+    footer {
+        position:relative;
+    }
+}
+@media (max-height:570px) and (max-width:630px){
+    body {
+        overflow-x: hidden;
+    }
+    section {
+        margin-bottom: 13px;
+    }
+    footer {
+        position: relative;
     }
 }
