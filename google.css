@@ -148,18 +148,6 @@ padding-left: 20px;
 align-items: center;
 margin-top: 0;
 }
-@media screen (max-height:33rem){
-    body {
-        overflow-x:hidden;
-        font-size: 2rem;
-    }
-    section {
-        margin-bottom: 1.5rem;
-    }
-    footer {
-        position:relative;
-    }
-}
 @media screen (max-height:37rem) and (max-width:39rem){
     body {
         overflow-x: hidden;
@@ -172,5 +160,17 @@ margin-top: 0;
         position: absolute;
         width: 100%;
         font-size: 2rem;
+    }
+}
+@media screen (max-height:33rem){
+    body {
+        overflow-x:hidden;
+        font-size: 2rem;
+    }
+    section {
+        margin-bottom: 1.5rem;
+    }
+    footer {
+        position:relative;
     }
 }
